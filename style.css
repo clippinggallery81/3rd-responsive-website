@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+/* shared styles */
+.primary-font-color {
+    color: #3A3A3A;
+}
+
+body {
+    max-width: calc(100% - 240px);
+    margin: 0 auto;
+}
+
+section{
+    margin-top: 100px;
+}
+
+/* nav styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 34px;
+}
+
+.banner-container {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-text-contents {
+    width: 780px;
+}
+
+.banner-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.banner-description {
+    font-weight: 600;
+}
+
+.banner-btn {
+    color: white;
+    font-weight: bold;
+    background-color: #E02C6D;
+    border: none;
+    border-radius: 41px;
+    padding: 10px 24px;
+}
+
+.banner-img-content {
+    position: relative;
+    width: 475px;
+    height: 475px;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.main-camera-img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    z-index: 2;
+}
+
+
+/* partner section style */
+.partners{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 1px solid black ;
+    border-bottom: 1px solid black;
+    padding: 45px;
+    padding-left: 120px;
+    align-items: center;
+}
+
+
+
+/* responsive for small device (Mobile) */
+@media screen and (max-width: 576px) {
+    body {
+        max-width:100%;
+    }
+
+    nav,
+    .banner-container {
+        flex-direction: column;
+    }
+
+    .nav-title {
+        text-align: center;
+    }
+
+    nav ul {
+        max-width: calc(100% - 20px);
+        align-items: center;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    nav ul li a {
+        margin-right: 20px;
+    }
+
+    .banner-container {
+        flex-direction: column-reverse;
+    }
+
+    .banner-text-contents {
+        max-width: calc(100% - 20px);
+        text-align: center;
+        margin-top: 0;
+        padding: 0 10px 0 10px;
+    }
+
+    .banner-title {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .banner-img-content {
+        max-width: calc(100% - 50px);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
